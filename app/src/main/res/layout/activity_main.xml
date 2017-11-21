@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.android.greenspades.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:elevation="8dp"
+        android:layout_marginLeft="4dp"
+        android:id="@+id/total">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:elevation="8dp"
+            android:layout_marginRight="4dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="8dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/back1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_margin="4dp"
+                android:textSize="20sp"
+                android:elevation="16dp"
+                android:text="Today Sale Count"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/today_count"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:elevation="16dp"
+                android:layout_margin="4dp"
+                android:text="Today Sale Count"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="8dp"
+                android:background="@drawable/back2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#CDDC39"
+                android:textStyle="bold"
+                android:layout_margin="4dp"
+                android:elevation="16dp"
+                android:textSize="20sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Total Sale Count"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/total_count"
+                android:textColor="#000000"
+                android:elevation="16dp"
+                android:layout_margin="4dp"
+                android:textSize="16sp"
+                android:text="Total Sale Count"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:elevation="8dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:background="@drawable/back3">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#FF80AB"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="16dp"
+                android:layout_margin="4dp"
+                android:text="Today Sale Sum"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/today_sum"
+                android:elevation="16dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                android:text="Today Sale Sum"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:background="@drawable/back4">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#03A9F4"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:elevation="16dp"
+                android:layout_margin="4dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Total Sale Sum"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:elevation="16dp"
+                android:layout_margin="4dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/total_sum"
+                android:text="Total Sale Sum"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Transaction History"
+        android:layout_below="@+id/total"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/transaction_history"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_below="@+id/transaction_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:scrollbars="vertical"/>
+
+
+</RelativeLayout>
